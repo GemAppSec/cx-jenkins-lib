@@ -45,7 +45,7 @@ class CxScan implements Serializable {
     private int vulnerabilityHighThreshold = 0
     
     // Required fields that can be appended to
-    private String comment
+    private String comment = 'CommitID=${GIT_COMMIT}; URL=${GIT_URL}; Branch=${GIT_BRANCH}; Committer=${GIT_COMMITTER_NAME}'
     private String excludeFolders = 'node_modules,test,target'
     private String filterPattern = '''
             !**/_cvs/**/*, !**/.svn/**/*,   !**/.hg/**/*,   !**/.git/**/*,  !**/.bzr/**/*, !**/bin/**/*,
